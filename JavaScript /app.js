@@ -1,6 +1,12 @@
 'use strict';
+const arrayanswers = [];
+
 var sname = prompt(' Type your name ');
+arrayanswers.push(sname);
+
 var Gender = prompt(' Type your Gender ( F for Female or M for Male  ) ');
+arrayanswers.push(Gender);
+
 var MGender = ' ' ;
 
 if(Gender ==  'M' )
@@ -17,6 +23,8 @@ if(Gender ==  'M' )
 
  
 var age = prompt(' Type your Age ');
+arrayanswers.push(age);
+
 if (age <= 0 ) {
 alert (' Age should be grater than 0 ')
 }
@@ -25,25 +33,36 @@ var conf = confirm(' Do you want to contenue  to Welcome message ?')
 if( conf == true){
     alert(" Your Welcome  ... " +  MGender + sname)
 }
-let arrayanswers = [];
 
 var Ques1 = prompt( 'Do you have driving lincses  ?( yes / no )');
 if (Ques1 == ""){
-    Ques1 = 'string';
+    Ques1 = 'invalid';
 }
-arrayanswers.push(Ques1);
 var Ques2 = prompt( 'Do you have Bacaloria Dgree  ?( yes / no )');
 if (Ques2 == ""){
-    Ques2 = 'string';
+    Ques2 = 'invalid';
 }
-arrayanswers.push(Ques2);
 var Ques3 = prompt( 'Did you finish all task for today  ?( yes / no )');
 if (Ques3 == ""){
-    Ques3 = 'string';
+    Ques3 = 'invalid';
 }
+arrayanswers.push(Ques1);
+arrayanswers.push(Ques2);
 arrayanswers.push(Ques3);
 
-console.log(arrayanswers);
+const QueArray = ["your Name is .. " , " your Gender is .. ", " your Age is .. ", " Driving Linces .. " , "Bacaloria Dgree ..  ", " Finish All task .. "];
+
+function print (arr){
+    for ( let i=0 ; i< arrayanswers.length ; i++){
+        console.log (QueArray[i]);
+        console.log(arr[i]);
+
+    }
+}
+
+print(arrayanswers);
+
+
 
 
 
